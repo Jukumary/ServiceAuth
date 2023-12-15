@@ -1,0 +1,22 @@
+###
+POST http://localhost:3000/api/register HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Juan",
+    "lastname": "Perez",
+    "email": "juan@gmail.com",
+    "password": "1234567",
+    "dateofbirth": "2002-09-30",
+    "gender": "male",
+    "role": "client"
+}
+
+###
+POST http://localhost:3000/api/login HTTP/1.1
+Content-Type: application/json
+
+{
+    "email": "juan@gmail.com",
+    "password": "1234567"
+}

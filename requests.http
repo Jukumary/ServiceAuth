@@ -5,7 +5,7 @@ Content-Type: application/json
 {
     "name": "Juan",
     "lastname": "Perez",
-    "email": "juan@gmail.com",
+    "email": "teranjegre@gmail.com",
     "password": "1234567",
     "dateofbirth": "2002-09-30",
     "gender": "male",
@@ -17,6 +17,30 @@ POST http://localhost:3000/api/login HTTP/1.1
 Content-Type: application/json
 
 {
-    "email": "juan@gmail.com",
-    "password": "1234567"
+    "email": "teranjegre@gmail.com",
+    "password": "123456789",
+    "tenantId": "657e180cae4e68e4d8eb1bc2"
 }
+
+###
+POST http://localhost:3000/api/forgotPassword HTTP/1.1
+Content-Type: application/json
+
+{
+    "email": "teranjegre@gmail.com"
+}
+
+###
+POST http://localhost:3000/api/resetPassword HTTP/1.1
+Content-Type: application/json
+
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTdlMTgwY2FlNGU2OGU0ZDhlYjFiYzMiLCJpYXQiOjE3MDI3NjI1MzMsImV4cCI6MTcwMjc2NjEzM30.TH7t-_ZYfvc0dgJXraC38juL6xQXugnJTDO5wgwa81Y",
+    "newPassword": "123456789"
+}
+
+###
+POST http://localhost:3000/api/logout HTTP/1.1
+Content-Type: application/json
+
+{}

@@ -27,6 +27,17 @@ const userSchema = mongoose.Schema({
     role: {
         type: String,
         required: true
+    },
+    resetToken: {
+        type: String
+    },
+    resetTokenExpiration: {
+        type: Date
+    },
+    tenantId: {
+        type: mongoose.Schema.Types.ObjectId,
+        required: true,
+        index: true
     }
 })
 
